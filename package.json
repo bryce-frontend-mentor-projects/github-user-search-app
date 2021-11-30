@@ -1,0 +1,7 @@
+{
+  "name": "github-user-search-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Bryce Fischer <bryce-fischer@idexx.com>",
+  "license": "MIT"
+}
