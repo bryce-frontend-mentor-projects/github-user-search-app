@@ -6,6 +6,8 @@ const CardWrapper = styled.div`
   border-radius: 15px;
   box-shadow: ${(props) => props.theme.shadows.search};
   padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
 export interface CardProps {}

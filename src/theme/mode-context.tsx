@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import { useMedia } from "react-use";
 
 import { ThemeMode, lightTheme, darkTheme } from "./theme";
 
@@ -39,14 +40,27 @@ export const useThemeContext = () => {
 export const ThemeContextProvider = (
   props: React.PropsWithChildren<ThemeContextProviderProps>
 ) => {
-  const { children, initialMode = "light" } = props;
+  const useDarkMode = useMedia("(prefers-color-scheme: dark");
+
+  const { children, initialMode = useDarkMode ? "dark" : "light" } = props;
 
   const [themeMode, setThemeMode] = React.useState<ThemeMode>(initialMode);
 
-  const theme = React.useMemo(
+  /**
+   * This will set the theme based on the theme mode, and will only change
+   * if the themeMode value is changed
+   */
+   const theme = React.useMemo(
     () => (themeMode === "light" ? lightTheme : darkTheme),
     [themeMode]
   );
+
+  /**
+   * This will fire when the media query `prefers-color-scheme` changes
+   */
+  React.useEffect(() => {
+    setThemeMode(useDarkMode ? "dark" : "light");
+  }, [useDarkMode]);
 
   return (
     <ThemeProvider theme={theme}>

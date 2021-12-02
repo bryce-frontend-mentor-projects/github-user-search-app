@@ -14,7 +14,7 @@ export const Window = styled.div.attrs(({ children }) => {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 730px;
+  min-width: 100%;
 
   padding: 1rem;
   flex: 1 1 auto;
@@ -23,10 +23,11 @@ export const Window = styled.div.attrs(({ children }) => {
       align-self: center;
       margin-top: auto;
       margin-bottom: auto;
-      min-width: 730px;
 
-      display: flex;
-      flex-direction: column;
+      width: 100%;
+      max-width: 730px;
+
+      display: grid;
       gap: 24px;
   }
 `;
