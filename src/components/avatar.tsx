@@ -5,6 +5,11 @@ const Wrapper = styled.img`
     border-radius: 50%;
     width: 117px;
     height: 117px;
+
+    @media(max-width: 480px) {
+        width: 70px;
+        height: 70px;
+    }
 `
 export interface AvatarProps {
     url: string;

@@ -21,8 +21,10 @@ export const Window = styled.div.attrs(({ children }) => {
 
   > [data-layout-cover-child] {
       align-self: center;
-      margin-top: auto;
-      margin-bottom: auto;
+      @media(min-width: 480px) {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
 
       width: 100%;
       max-width: 730px;

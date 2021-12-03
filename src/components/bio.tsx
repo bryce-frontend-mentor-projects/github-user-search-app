@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
     grid-column: 1/3;
+    color: ${props => props.theme.colors.textSecondary};
+    font-size: 13px;
 `;
 
 export interface BioProps {

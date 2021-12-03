@@ -25,8 +25,13 @@ const GlobalStyle = createGlobalStyle`
         font-family: "Space Mono";
         font-weight: bold;
         font-size: 26px;
+
         line-height : 38px;
         color: ${(props) => props.theme.colors.textPrimary};
+    }
+
+    h2 {
+      font-size: 22px;
     }
 `;
 

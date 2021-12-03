@@ -5,9 +5,10 @@ const CardWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.searchBackground};
   border-radius: 15px;
   box-shadow: ${(props) => props.theme.shadows.search};
-  padding: 1em;
+  padding: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  grid-template-columns: 70px 1fr;
 `;
 
 export interface CardProps {}
