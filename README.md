@@ -26,7 +26,7 @@ TODO...
 
 ### Links
 
-- Live Site URL: [https://vbfischer.github.io/github-user-search-app/](https://vbfischer.github.io/github-user-search-app/)
+- Live Site URL: [https://bryce-frontend-mentor-projects.github.io/github-user-search-app/](https://bryce-frontend-mentor-projects.github.io/github-user-search-app/)
 
 ## My Process
 
