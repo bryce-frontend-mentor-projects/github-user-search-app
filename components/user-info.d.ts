@@ -1,5 +1,6 @@
+import { Nullable } from '../types';
 export interface UserInfoProps {
-    name: string;
+    name: Nullable<string>;
     login: string;
     joined: string;
 }
