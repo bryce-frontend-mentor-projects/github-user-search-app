@@ -9,7 +9,8 @@ const SearchWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.searchBackground};
   border-radius: 15px;
   box-shadow: ${(props) => props.theme.shadows.search};
-  padding: 1em;
+  padding: 5px;
+  padding-left: 12px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -20,8 +21,8 @@ const SearchWrapper = styled.div`
   }
 
   & svg {
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
   }
 `;
 
@@ -66,6 +67,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
       <SearchIcon />
       <StyledInput ref={ref} value={value} onChange={(e) => setValue(e.target.value)} placeholder="Search GitHub username..." />
       {hasError && <ErrorWrapper>No results</ErrorWrapper>}
+      <ErrorWrapper>No results</ErrorWrapper>
       <Button onClick={handleClick}>Search</Button>
     </SearchWrapper>
   );

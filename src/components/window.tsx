@@ -11,25 +11,16 @@ export const Window = styled.div.attrs(({ children }) => {
     ),
   };
 })`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-width: 100%;
-
-  padding: 1rem;
-  flex: 1 1 auto;
+  overflow: hidden;
+  padding: 18px 24px;
 
   > [data-layout-cover-child] {
-      align-self: center;
-      @media(min-width: 480px) {
-        margin-top: auto;
-        margin-bottom: auto;
-      }
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 
-      width: 100%;
-      max-width: 730px;
-
-      display: grid;
-      gap: 24px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-inline: auto;
   }
 `;
