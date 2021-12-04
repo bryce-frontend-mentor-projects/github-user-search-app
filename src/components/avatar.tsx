@@ -10,6 +10,10 @@ const Wrapper = styled.img`
         width: 70px;
         height: 70px;
     }
+
+    @media(min-width: 768px) {
+        grid-row: 1/4;
+    }
 `
 export interface AvatarProps {
     url: string;

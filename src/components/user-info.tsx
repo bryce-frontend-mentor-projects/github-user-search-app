@@ -7,6 +7,18 @@ const UserInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media(min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    & :last-child {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
+
+
   & h2, & h3 {
     margin: 0;
     padding: 0;

@@ -29,9 +29,15 @@ export const Window = styled.div.attrs(({ children }) => {
     @media(min-width: 481px) {
       flex: 1;
       align-self: center;
-      margin: 98px;
       margin-top: auto;
       margin-bottom: auto;
+    }
+    @media(min-width: 481px) and (max-width: 768px) {
+      margin: 98px;
+    }
+
+    @media(min-width: 769px) {
+      max-width: 730px;
     }
   }
 `;
