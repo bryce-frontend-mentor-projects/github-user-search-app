@@ -19,6 +19,8 @@ export const Window = styled.div.attrs(({ children }) => {
     flex-direction: column;
     align-items: stretch;
 
+    gap: 16px;
+
     margin-inline-start: auto;
     margin-inline-end: auto;
     margin-inline: auto;

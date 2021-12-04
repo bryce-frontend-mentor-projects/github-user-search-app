@@ -33,7 +33,8 @@ export const lightTheme: DefaultTheme = {
         searchBackground: "#FEFEFE",
         searchColor: "#4B6A9B",
         cardBackground: "#FEFEFE",
-        error: "#F74646"
+        error: "#F74646",
+        metaBackground: "#F6F8FF"
     },
     shadows: {
         search: "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)"
@@ -60,7 +61,8 @@ export const darkTheme: DefaultTheme = {
         searchBackground: "#1E2A47",
         searchColor: "#FFFFFF",
         cardBackground: "#1E2A47",
-        error: "#F74646"
+        error: "#F74646",
+        metaBackground: "#141D2F"
     },
     shadows: {
         search: "none"

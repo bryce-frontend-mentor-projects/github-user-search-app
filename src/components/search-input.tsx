@@ -30,45 +30,48 @@ const StyledInput = styled.input`
   font-family: "Space Mono";
   background-color: transparent;
   border: 0;
-  flex: 1;
   color: ${(props) => props.theme.colors.searchColor};
   font-size: 13px;
-
+  width: 100%;
   &:focus {
-      border: 0;
-      outline: 0;
+    border: 0;
+    outline: 0;
   }
+`;
+
+const InputContainer = styled.div`
+  flex: 1;
 `;
 
 const ErrorWrapper = styled.div`
   font-size: 13px;
   color: ${(props) => props.theme.colors.error};
-`
+`;
 
 export interface SearchInputProps {
   onChange?: (value: string) => void;
   hasError?: boolean;
 }
 
-export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>((props, ref) => {
-  const {onChange, hasError = false} = props;
+export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
+  (props, ref) => {
+    const { onChange, hasError = false } = props;
 
-  const [value, setValue] = React.useState<string>("");
+    const [value, setValue] = React.useState<string>("");
 
-  const handleClick = () => {
-    onChange?.(value);
+    const handleClick = () => {
+      onChange?.(value);
+    };
+
+    return (
+      <SearchWrapper>
+        <SearchIcon />
+        <InputContainer>
+          <StyledInput placeholder="Search GitHub username..." ref={ref} value={value} onChange={(e) => setValue(e.target.value)} />
+        </InputContainer>
+        {hasError && <ErrorWrapper>No results</ErrorWrapper>}
+        <Button onClick={handleClick}>Search</Button>
+      </SearchWrapper>
+    );
   }
-
-  if(hasError) {
-    console.log('HAS ERROR');
-  }
-  return (
-    <SearchWrapper>
-      <SearchIcon />
-      <StyledInput ref={ref} value={value} onChange={(e) => setValue(e.target.value)} placeholder="Search GitHub username..." />
-      {hasError && <ErrorWrapper>No results</ErrorWrapper>}
-      <ErrorWrapper>No results</ErrorWrapper>
-      <Button onClick={handleClick}>Search</Button>
-    </SearchWrapper>
-  );
-});
+);

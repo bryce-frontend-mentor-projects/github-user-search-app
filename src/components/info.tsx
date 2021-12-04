@@ -7,6 +7,7 @@ export interface InfoItemListProps {}
 export interface InfoItemProps {
   icon: React.ReactNode;
   value: Nullable<string>;
+  url?: string;
 }
 
 interface ItemWrapperProps {
@@ -36,13 +37,15 @@ const InfoItemListWrapper = styled.div`
 `
 
 export const InfoItem = (props: InfoItemProps) => {
-  const { icon, value } = props;
+  const { icon, value, url } = props;
 
   const displayValue = value || "Not Available";
+
+  const child = url && value ? <a href={url}>{displayValue}</a> : <span>{displayValue}</span>
   return (
     <InfoItemWrapper hasValue={!!value}>
       {icon}
-      <span>{displayValue}</span>
+      {child}
     </InfoItemWrapper>
   );
 };

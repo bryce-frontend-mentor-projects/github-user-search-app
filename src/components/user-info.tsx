@@ -45,9 +45,11 @@ export interface UserInfoProps {
 export const UserInfo = (props: UserInfoProps) => {
   const { name, login, joined } = props;
 
+  const actualName = name ?? login;
+
   return (
     <UserInfoWrapper>
-      <h2>{name}</h2>
+      <h2>{actualName}</h2>
       <h3>@{login}</h3>
       <div>Joined {joined}</div>
     </UserInfoWrapper>

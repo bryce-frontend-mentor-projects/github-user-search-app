@@ -38,9 +38,9 @@ a good opportunity to do that. Also, get some experience with different data fet
 - [x] Mobile styling.
 - [ ] Tablet styling.
 - [ ] Desktop styling.
-- [ ] Fix issue with "No results" formatting in mobile.
+- [x] Fix issue with "No results" formatting in mobile.
 - [x] Actual data fetching from github
-- [ ] Add links to appropriate places
+- [x] Add links to appropriate places
 
 ### Built with
 
@@ -49,9 +49,16 @@ a good opportunity to do that. Also, get some experience with different data fet
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
-- [Webpack](https://webpack.js.org/)
+- [Webpack](https://webpack.js.org/) - For building and deploying.
 - [SWR](https://swr.vercel.app/) - React Hooks for Data Fetching
+- [Github Actions](https://github.com/features/actions) - For automating deploying of the website when commited to master
   
+### What I Learned
+
+`input` element for some reason likes to have a minimum size, so made it hard to play nicely in the search bar. Had to wrap it in its own `div` element for it to shrink/grow correctly.
+
+First experience using Github Actions to deploy.
+
 ## Author
 
 - Website - [Bryce Fischer](https://github.com/vbfischer)
