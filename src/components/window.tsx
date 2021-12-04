@@ -12,7 +12,8 @@ export const Window = styled.div.attrs(({ children }) => {
   };
 })`
   overflow: hidden;
-  padding: 18px 24px;
+  height: 100vh;
+  display: flex;
 
   > [data-layout-cover-child] {
     display: flex;
@@ -24,5 +25,13 @@ export const Window = styled.div.attrs(({ children }) => {
     margin-inline-start: auto;
     margin-inline-end: auto;
     margin-inline: auto;
+
+    @media(min-width: 481px) {
+      flex: 1;
+      align-self: center;
+      margin: 98px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
 `;

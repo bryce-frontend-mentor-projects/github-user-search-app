@@ -31,9 +31,13 @@ const InfoItemWrapper = styled.div<ItemWrapperProps>`
 
 const InfoItemListWrapper = styled.div`
   grid-column: 1 / 3;
-  display: flex;
-  flex-direction: column;
+  
+  display: grid;
   gap: 16px;
+
+  @media(min-width: 481px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
 
 export const InfoItem = (props: InfoItemProps) => {

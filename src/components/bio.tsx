@@ -13,7 +13,9 @@ export interface BioProps {
 
 
 export const Bio = (props: BioProps) => {
-    const {bio = "This profile has no bio"} = props;
+    const {bio} = props;
+    
+    const copy = bio ?? "This profile has no bio";
 
-    return <Wrapper>{bio}</Wrapper>
+    return <Wrapper>{copy}</Wrapper>
 }

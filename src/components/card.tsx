@@ -9,6 +9,10 @@ const CardWrapper = styled.div`
   display: grid;
   gap: 24px;
   grid-template-columns: 70px 1fr;
+
+  @media(min-width: 481px) {
+    grid-template-columns: 117px 1fr;
+  }
 `;
 
 export interface CardProps {}
