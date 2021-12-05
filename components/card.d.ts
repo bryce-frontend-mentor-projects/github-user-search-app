@@ -1,4 +1,4 @@
-import React from "react";
-export interface CardProps {
-}
-export declare const Card: (props: React.PropsWithChildren<CardProps>) => JSX.Element;
+/**
+ * Simple styled card component that contains the "body" of the current user
+ */
+export declare const Card: import("styled-components").StyledComponent<"div", import("styled-components").DefaultTheme, {}, never>;
