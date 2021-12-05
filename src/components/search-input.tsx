@@ -5,6 +5,9 @@ import { Button } from "./button";
 
 import SearchIcon from "../assets/icon-search.svg";
 
+/**
+ * Styled component for the search wrapper
+ */
 const SearchWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.searchBackground};
   border-radius: 15px;
@@ -26,6 +29,9 @@ const SearchWrapper = styled.div`
   }
 `;
 
+/**
+ * Styled component for the input field
+ */
 const StyledInput = styled.input`
   font-family: "Space Mono";
   background-color: transparent;
@@ -39,20 +45,43 @@ const StyledInput = styled.input`
   }
 `;
 
+/**
+ * Container to wrap the input field so that it can size correctly depending on the space available.
+ */
 const InputContainer = styled.div`
   flex: 1;
 `;
 
+/**
+ * Styled component for error text. Is only displayed if in an error state.
+ */
 const ErrorWrapper = styled.div`
   font-size: 13px;
   color: ${(props) => props.theme.colors.error};
 `;
 
 export interface SearchInputProps {
+  /**
+   * Event handler for when the user clicks the search button
+   */
   onChange?: (value: string) => void;
+
+  /**
+   * boolean determining if it should be in an error state.
+   * 
+   * @default false
+   */
   hasError?: boolean;
 }
 
+/**
+ * Component responsible for the Search bar. When the user clicks the `button` it will trigger an `onChange` event
+ * with the value of what the user has typed in the input field.
+ * 
+ * The parent component is responsible for validating the input, and passing an error.
+ * 
+ * Internally, it uses State to track what the user types in the input field.
+ */
 export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
   (props, ref) => {
     const { onChange, hasError = false } = props;

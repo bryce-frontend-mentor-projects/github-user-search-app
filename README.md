@@ -22,7 +22,20 @@ Users should be able to:
 
 ### Screenshot
 
-TODO...
+#### Desktop
+
+![desktop light mode](docs/small/screenshot_desktop_light.png)
+![desktop dark mode](docs/small/screenshot_desktop_dark.png)
+
+#### Tablet
+
+![tablet light mode](docs/small/screenshot_tablet_light.png)
+![tablet dark mode](docs/small/screenshot_tablet_dark.png)
+
+#### Mobile
+
+![mobile light mode](docs/small/screenshot_mobile_light.png)
+![mobile dark mode](docs/small/screenshot_mobile_dark.png)
 
 ### Links
 
@@ -36,8 +49,8 @@ a good opportunity to do that. Also, get some experience with different data fet
 ### Progress
 
 - [x] Mobile styling.
-- [ ] Tablet styling.
-- [ ] Desktop styling.
+- [x] Tablet styling.
+- [x] Desktop styling.
 - [x] Fix issue with "No results" formatting in mobile.
 - [x] Actual data fetching from github
 - [x] Add links to appropriate places
@@ -49,10 +62,12 @@ a good opportunity to do that. Also, get some experience with different data fet
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
-- [Webpack](https://webpack.js.org/) - For building and deploying.
 - [SWR](https://swr.vercel.app/) - React Hooks for Data Fetching
+- [React Use](https://github.com/streamich/react-use) - This hooks lib has a handy `useMedia` hook that was used to determine what the current user's color mode (light/dark) is.
+- [Webpack](https://webpack.js.org/) - For building and deploying.
+- [SVGR](https://react-svgr.com/docs/webpack/) - Transforms SVGs into React Components. Implemented in the webpack build (see `@svgr/webpack` loader)
 - [Github Actions](https://github.com/features/actions) - For automating deploying of the website when commited to master
-  
+
 ### What I Learned
 
 `input` element for some reason likes to have a minimum size, so made it hard to play nicely in the search bar. Had to wrap it in its own `div` element for it to shrink/grow correctly.

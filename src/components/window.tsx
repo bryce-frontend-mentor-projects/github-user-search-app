@@ -2,6 +2,11 @@ import React from "react";
 
 import styled from "styled-components";
 
+/**
+ * Window class acts as the "app boundary", providing the "view port" the rest of the layout uses.
+ * 
+ * The first child of the window is the "cover child" container that contains the "usuable" area.
+ */
 export const Window = styled.div.attrs(({ children }) => {
   return {
     children: (

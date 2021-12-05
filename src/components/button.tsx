@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+/**
+ * Simple styled button for use in the search bar
+ */
 export const Button = styled.button`
     background-color: ${props => props.theme.colors.button};
     color: ${props => props.theme.colors.white};

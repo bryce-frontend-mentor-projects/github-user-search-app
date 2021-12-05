@@ -6,6 +6,9 @@ import Sun from '../assets/icon-sun.svg';
 
 import {useThemeContext} from '../theme';
 
+/**
+ * Styled component that acts as a wrapper for the header
+ */
 const HeaderWrapper = styled.header`
     --gutter: 1rem;
 
@@ -21,6 +24,9 @@ const HeaderWrapper = styled.header`
     }
 `;
 
+/**
+ * Styled component that styles the "button" that toggles the light/dark mode
+ */
 const ThemeSwitcher = styled.span`
   cursor: pointer;
   letter-spacing: 2.5px;
@@ -46,10 +52,11 @@ const ThemeSwitcher = styled.span`
 
 `
 
-export interface HeaderProps {}
-
-export const Header = (props: HeaderProps) => {
-  console.log("props", props);
+/**
+ * Component representing the Header. It contains the button which allows the user to switch from light/dark
+ * mode, displaying the appropriate text and icon for the current mode.
+ */
+export const Header = () => {
   const {toggleThemeMode, nextMode} = useThemeContext();
 
   const icon = nextMode === "light" ? <Sun/> : <Moon/>;

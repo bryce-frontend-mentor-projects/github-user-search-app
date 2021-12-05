@@ -5,14 +5,32 @@ import {Nullable} from '../types';
 export interface InfoItemListProps {}
 
 export interface InfoItemProps {
+  /**
+   * Icon to use for the list item
+   */
   icon: React.ReactNode;
+
+  /**
+   * Value for the item
+   */
   value: Nullable<string>;
+
+  /**
+   * URL to use for the link
+   */
   url?: string;
 }
 
 interface ItemWrapperProps {
+  /**
+   * Internal property to toggle opacity on an item if it doesn't contain a value
+   */
   hasValue: boolean;
 }
+
+/**
+ * Wrapper for a list item.
+ */
 const InfoItemWrapper = styled.div<ItemWrapperProps>`
   color: ${props => props.theme.colors.textSecondary};
   font-size: 13px;
@@ -29,17 +47,10 @@ const InfoItemWrapper = styled.div<ItemWrapperProps>`
   }
 `;
 
-const InfoItemListWrapper = styled.div`
-  grid-column: 1 / 3;
-  
-  display: grid;
-  gap: 16px;
-
-  @media(min-width: 481px) {
-    grid-template-columns: 1fr 1fr;
-  }
-`
-
+/**
+ * Component that displays an individual link along with its icon. If it has a `url` property, it will be 
+ * wrapped in a link tag
+ */
 export const InfoItem = (props: InfoItemProps) => {
   const { icon, value, url } = props;
 
@@ -54,10 +65,17 @@ export const InfoItem = (props: InfoItemProps) => {
   );
 };
 
-export const InfoItemList = (
-  props: React.PropsWithChildren<InfoItemListProps>
-) => {
-  const { children } = props;
+/**
+ * Styled component that handles displaying the links at the bottom of the page
+ */
+export const InfoItemList = styled.div`
+  grid-column: 1 / 3;
+  
+  display: grid;
+  gap: 16px;
 
-  return <InfoItemListWrapper>{children}</InfoItemListWrapper>;
-};
+  @media(min-width: 481px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`
+
